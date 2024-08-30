@@ -4,17 +4,17 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-// voting_items紀錄所有投票項目之名稱、ID
+// users紀錄所有使用者之姓名、ID
 @Getter
 @Setter
 @Entity
 @Table
-public class voting_items {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column
-    private String name;
+    private String username;
 
 }
