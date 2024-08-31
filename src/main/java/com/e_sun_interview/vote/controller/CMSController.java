@@ -26,4 +26,11 @@ public class CMSController {
         return "Success";
     }
 
+    @DeleteMapping("/delete/{id}")
+    public String deleteVotingItem(@PathVariable("id") int id,@RequestBody Voting_items item){
+        System.out.println("id" + id);
+        cmsService.deleteVotingItem(id,item);
+        return "Success";
+    }
+
 }

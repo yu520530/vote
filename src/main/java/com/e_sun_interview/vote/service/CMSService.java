@@ -19,4 +19,9 @@ public class CMSService {
     public void createVotingItem(Voting_items item){
         cmsRepository.save(item);
     }
+
+    public void deleteVotingItem(int id,Voting_items item2){
+        Voting_items item = cmsRepository.getReferenceById(id);
+        cmsRepository.delete(item);
+    }
 }
