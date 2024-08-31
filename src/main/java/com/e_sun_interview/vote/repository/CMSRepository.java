@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CMSRepository extends JpaRepository<Voting_items, Long> {
+public interface CMSRepository extends JpaRepository<Voting_items, Integer> {
 }
