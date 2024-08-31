@@ -20,7 +20,7 @@ public class CMSController {
         return cmsService.getVotingItem();
     }
 
-    @PatchMapping("/create")
+    @PostMapping("/create")
     public String createVotingItem(@RequestBody Voting_items item){
         cmsService.createVotingItem(item);
         return "Success";
