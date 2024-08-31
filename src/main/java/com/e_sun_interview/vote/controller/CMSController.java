@@ -14,19 +14,19 @@ public class CMSController {
     @Autowired
     CMSService cmsService;
 
-    @GetMapping("/list")
+    @GetMapping("/votingItems")
     // 這個地方需要顯示後台資料
     public List<Voting_items> listVotingItem() {
         return cmsService.getVotingItem();
     }
 
-    @PostMapping("/create")
+    @PostMapping("/votingItems")
     public String createVotingItem(@RequestBody Voting_items item){
         cmsService.createVotingItem(item);
         return "Success";
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/votingItems/{id}")
     public String deleteVotingItem(@PathVariable("id") int id,@RequestBody Voting_items item){
         System.out.println("id" + id);
         cmsService.deleteVotingItem(id,item);
