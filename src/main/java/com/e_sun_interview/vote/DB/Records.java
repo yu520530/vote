@@ -14,5 +14,10 @@ public class Records {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column
+    private String username;
+
+    @Column
+    private String itemId;
 
 }
