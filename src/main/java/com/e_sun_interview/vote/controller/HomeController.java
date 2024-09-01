@@ -1,7 +1,9 @@
 package com.e_sun_interview.vote.controller;
 
 import com.e_sun_interview.vote.DB.Voting_items;
+import com.e_sun_interview.vote.common.ChangeFormat;
 import com.e_sun_interview.vote.service.HomeService;
+import io.swagger.v3.core.util.Json;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,8 +23,8 @@ public class HomeController {
     }
 
     @PostMapping("/records")
-    public String createRecords(@RequestBody List<String> form){
-//        cmsService.deleteVotingItem(id,item);
+    public String createRecords(@RequestBody ChangeFormat form){
+        homeService.createRecords(form);
         return "Success";
     }
 }
